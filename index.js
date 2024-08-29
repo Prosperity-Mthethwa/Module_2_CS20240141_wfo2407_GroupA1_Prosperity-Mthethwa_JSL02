@@ -37,8 +37,15 @@ const addNewGoal = () => {
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
     // If it's not a duplicate, proceed with adding it as a new goal.
 
-    // ⚠️ Hint 3: Code structure
+    if (isDuplicate) {
+        alert('Goal already exists! Please enter a different goal.');
+    } else {
+        // ⚠️ Hint 3: Code structure
         // You might want to wrap the duplicate-checking logic in an 'if' statement.
+        const newGoal = document.createElement('li');
+        newGoal.textContent = goalInput;
+        goalList.appendChild(newGoal);
+    } 
 };
 
 // Add event listener to the goal submit button
