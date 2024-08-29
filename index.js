@@ -15,7 +15,7 @@ const displayWorkoutRoutine = () => {
 document.querySelector('#submitWorkout').addEventListener('click', displayWorkoutRoutine);
 
 const addNewGoal = () => {
-    const goalInput = document.querySelector('#goalInput').value;
+    const goalInput = document.querySelector('#goalInput').value.trim();
     const goalList = document.querySelector('#goalList');
     
     const existingGoals = goalList.children;
